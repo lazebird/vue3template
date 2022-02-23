@@ -1,6 +1,6 @@
 // @ts-check
-import { defineConfig } from 'eslint-define-config';
-export default defineConfig({
+const { defineConfig } = require('eslint-define-config');
+module.exports = defineConfig({
   env: {
     browser: true,
     es2021: true,
@@ -22,5 +22,6 @@ export default defineConfig({
     'vue/multi-word-component-names': 'off',
     'vue/require-default-prop': 'off',
     'vue/max-attributes-per-line': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 });

@@ -1,9 +1,6 @@
 <template>
-  <xmlparserVue />
+  <h1>Hello World!</h1>
 </template>
-<script setup>
-  import xmlparserVue from './views/xmlparser.vue';
-</script>
 <style>
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
