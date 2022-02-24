@@ -17,10 +17,36 @@ module.exports = defineConfig({
   plugins: ['vue', '@typescript-eslint'],
   rules: {
     'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
     'no-irregular-whitespace': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
+    'no-use-before-define': 'off',
+    'space-before-function-paren': 'off',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
 
+    '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
+    'vue/script-setup-uses-vars': 'error',
+    'vue/custom-event-name-casing': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/attributes-order': 'off',
     'vue/one-component-per-file': 'off',
