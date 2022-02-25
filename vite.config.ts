@@ -3,6 +3,10 @@ import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import Components from 'unplugin-vue-components/vite';
 
+import visualizer from 'rollup-plugin-visualizer';
+const plugins = [];
+if (process.env.REPORT === 'true') plugins.push(visualizer({ open: true, gzipSize: true, brotliSize: true }));
+
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
 }
@@ -31,7 +35,7 @@ export default defineConfig(({ command, mode }) => {
         { find: /#\//, replacement: pathResolve('types') + '/' },
       ],
     },
-    plugins: [vue(), Components({})],
+    plugins: [vue(), Components({}), ...plugins],
     build: mode === 'demo' ? builddemo : buildlib,
     server: { host: true },
   };
