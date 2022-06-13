@@ -12,6 +12,7 @@
     "allowJs": true,
     "noEmit": true,
     "lib": ["esnext", "dom"],
+    "types": ["vite/client", "jest"],
     "outDir": "./",
     "baseUrl": ".",
     "paths": {
