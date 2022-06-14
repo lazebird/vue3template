@@ -5,6 +5,7 @@ module.exports = defineConfig({
     browser: true,
     es2021: true,
     node: true,
+    jest: true,
     'vue/setup-compiler-macros': true,
   },
   extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended'],
